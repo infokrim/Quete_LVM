@@ -1,4 +1,4 @@
-# Quete_lvm
+# Quete_LVM
 Challenge de la quête LVM
 ### Étape 1 : Ajout d'un nouveau disque
 
@@ -93,4 +93,33 @@ ls -l /home
 
 ![4](https://github.com/user-attachments/assets/8c6e2c6f-294e-4fb7-91a5-db842935e3dc)
 
+Les deux répertoires contiennent les mêmes fichiers, confirmant que le snapshot est monté correctement.
+
+### Étape 5 : Démontage et destruction du snapshot
+
+1. **Démonter le snapshot :**
+- Exécutez la commande suivante pour démonter le snapshot :
+```bash
+umount /home-snap
+```
+
+2. **Supprimer le snapshot :**
+- Supprimez le snapshot `home_snap` avec la commande suivante :
+```bash
+lvremove /dev/debian-vg/home_snap
+```
+
+3. **Vérification :**
+- Utilisez la commande `lvs` pour vérifier que le snapshot a bien été supprimé.
+
+![5](https://github.com/user-attachments/assets/69bd8d68-456c-4c70-85a1-bd714064f1e4)
+
+
+### Conclusion du Challenge
+
+Toutes les étapes du challenge sont complétées :
+1. Ajout d'un nouveau disque et initialisation en tant que PV.
+2. Ajout du PV au groupe de volumes `debian-vg`.
+3. Création d'un snapshot du volume logique `home` et montage de celui-ci.
+4. Démontage et suppression du snapshot.
 
