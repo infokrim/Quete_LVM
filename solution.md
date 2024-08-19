@@ -114,6 +114,7 @@ lvremove /dev/debian-vg/home_snap
 
 ![5](https://github.com/user-attachments/assets/69bd8d68-456c-4c70-85a1-bd714064f1e4)
 
+Le snapshot home_snap ne figure plus dans la liste des volumes logiques, confirmant sa suppression.
 
 ### Conclusion du Challenge
 
